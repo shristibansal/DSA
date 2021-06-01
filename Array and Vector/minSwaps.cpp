@@ -12,7 +12,7 @@ int countminSwaps(vector<int> a)
 		ap[i].first = a[i];
 		ap[i].second = i;
 	}
-	sort(ap,ap+n);
+	sort(ap.begin(),ap.end());
 	
 	vector<bool> visited(n,false);
 	int ans=0;
