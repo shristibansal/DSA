@@ -31,7 +31,7 @@ int main()
 		getline(cin, temp);
 		st.push_back(temp);
 		
-	};
+	}
 	
 	for(string s: st)
 	{
