@@ -62,11 +62,15 @@ int main()
 {
 	node *a = NULL;
 	node *b = NULL;
+	insertAtEnd(&a, 1);
 	insertAtEnd(&a, 2);
+	insertAtEnd(&a, 3);
 	insertAtEnd(&a, 4);
+	insertAtEnd(&a, 5);
 	insertAtEnd(&a, 6);
+	insertAtEnd(&a, 7);
 	insertAtEnd(&a, 8);
-	insertAtEnd(&a, 10);
+	
 	printList(a);
 	
 	node *temp;
