@@ -46,8 +46,10 @@ bool detectCycle(node *head)
 	
 	node *fast = head->next;
 	node *slow = head;
+	int i=0;
 	while(fast != NULL && fast->next != NULL)
 	{
+		cout<<i++;
 		fast = fast->next->next;
 		slow = slow->next;
 		if(slow->data == fast->data)
