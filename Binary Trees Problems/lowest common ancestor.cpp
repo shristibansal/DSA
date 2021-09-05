@@ -29,6 +29,7 @@ int main()
     node *root = newNode(20);
     root->left = newNode(8);
     root->right = newNode(22);
+    root->right->right = newNode(44);
     root->left->left = newNode(4);
     root->left->right = newNode(12);
     root->left->right->left = newNode(10);
@@ -45,5 +46,8 @@ int main()
     n1 = 10, n2 = 22;
     t = lca(root, n1, n2);
     cout << "LCA of " << n1 << " and " << n2 << " is " << t->data << endl;
+    n1 = 10, n2 = 44;
+    t = lca(root, n1, n2);
+    cout << "LCA of " << n1 << " and " << n2 << " is " << t->data<<endl;
     return 0;
 }
