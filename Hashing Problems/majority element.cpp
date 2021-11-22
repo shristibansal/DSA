@@ -1,19 +1,22 @@
 #include<iostream>
 #include<vector>
-#include<unordered_map>
+#include<map>
 using namespace std;
-
-int majorityElement(vector<int>& nums) {
-    int len = nums.size();
-    unordered_map<int, int> occurences;
-    for(int n : nums) {
-        if(occurences.find(n) != occurences.end()) {
-            occurences.insert({n, 1});
+    int majorityElement(vector<int>& nums) {
+    map<int,int> m;
+        int n=nums.size()/2;
+        for(int i=0;i<nums.size();i++)
+        {
+            m[nums[i]]++;
         }
-        if(occurences[n]++ >= len / 2) return n;
+         for(auto x:m)
+        {
+            if(x.second > n)
+                return x.first;
+        }
+        
+       return -1; 
     }
-    return -1;
-}
 int main()
 {
 	vector<int> nums={3,2,3};
